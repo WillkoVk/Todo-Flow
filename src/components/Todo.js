@@ -1,9 +1,9 @@
 // @flow
 
 import React from 'react';
-import type { TodoWithClick } from '../types/todos';
+import type { TodoWithActions } from '../types/todos';
 
-const Todo = ({ title, description, priority, start, onClick }: TodoWithClick) => (
+const Todo = ({ title, description, priority, start, onClick, onDelete }: TodoWithActions) => (
   <tr>
     <td>
       <input type="checkbox" id={`todo-${title}`} className="vh" onChange={onClick} />
@@ -15,6 +15,7 @@ const Todo = ({ title, description, priority, start, onClick }: TodoWithClick) =
     <td><span className="priority">{ priority }</span></td>
     <td>{ start }</td>
     <td>{ description }</td>
+    <td><button type="button" onClick={onDelete}>X</button></td>
   </tr>
 );
 

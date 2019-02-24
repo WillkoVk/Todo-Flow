@@ -20,3 +20,10 @@ export const toggleTodo = (id: Id): TodosAction => {
     id
   };
 };
+
+export const removeTodo = (id: Id): TodosAction => {
+  return {
+    type: 'REMOVE_TODO',
+    id
+  };
+};

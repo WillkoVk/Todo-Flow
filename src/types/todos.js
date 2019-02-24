@@ -17,9 +17,10 @@ export type NewTodo = {|
   completed: boolean
 |};
 
-export type TodoWithClick = {|
+export type TodoWithActions = {|
   ...NewTodo,
-  onClick: Function
+  onClick: Function,
+  onDelete: Function
 |};
 
 export type Todo = {
@@ -39,4 +40,5 @@ export type TodosState = {
 
 export type TodosAction =
   | { type: 'ADD_TODO', payload: NewTodo }
-  | { type: 'TOGGLE_TODO', +id: Id };
+  | { type: 'TOGGLE_TODO', +id: Id }
+  | { type: 'REMOVE_TODO', +id: Id };

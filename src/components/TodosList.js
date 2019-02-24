@@ -10,10 +10,11 @@ import type { Todos, Id, Title } from '../types/todos';
 export type Props = {
   todos: Todos,
   onTodoCheck: (id: Id) => void,
+  onTodoRemove: (id: Id) => void,
   onTitleSearch: (title: Title) => void
 };
 
-const TodoList = ({ todos, onTodoCheck, onTitleSearch }: Props) => (
+const TodoList = ({ todos, onTodoCheck, onTodoRemove, onTitleSearch }: Props) => (
   <table border="1">
     <thead>
     <tr>
@@ -26,7 +27,12 @@ const TodoList = ({ todos, onTodoCheck, onTitleSearch }: Props) => (
     </thead>
     <tbody>
     {todos.map(todo => (
-      <Todo key={todo.id} onClick={() => onTodoCheck(todo.id)} {...todo} />
+      <Todo
+        key={todo.id}
+        onClick={() => onTodoCheck(todo.id)}
+        onDelete={() => onTodoRemove(todo.id)}
+        {...todo}
+      />
     ))}
     </tbody>
   </table>

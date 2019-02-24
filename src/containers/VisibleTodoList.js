@@ -2,7 +2,7 @@
 
 import { connect } from 'react-redux';
 
-import { toggleTodo } from '../actions/todos';
+import { toggleTodo, removeTodo } from '../actions/todos';
 import { setTitleFilter } from '../actions/filterByTitle';
 import { visibleTodosSelector } from '../selectors';
 import TodoList from '../components/TodosList';
@@ -17,6 +17,9 @@ const mapStateToProps = (state: State) => ({
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   onTodoCheck: id => {
     dispatch(toggleTodo(id));
+  },
+  onTodoRemove: id => {
+    dispatch(removeTodo(id));
   },
   onTitleSearch: title => {
     dispatch(setVisibilityFilter('TITLE'));
