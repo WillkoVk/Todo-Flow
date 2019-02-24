@@ -9,6 +9,7 @@ import App from './components/App';
 import reducers from './reducers';
 
 import type { Store } from './types';
+// $FlowFixMe
 import './index.scss';
 
 const store: Store = createStore(

@@ -1,12 +1,12 @@
 // @flow
 
 import type {
-  PriorityFilter,
+  VisibilityFilter,
   VisibilityFilterAction
-} from '../types/priorityFilter';
+} from '../types/filter';
 
 export const setVisibilityFilter = (
-  filter: PriorityFilter
+  filter: VisibilityFilter
 ): VisibilityFilterAction => {
   return {
     type: 'SET_VISIBILITY_FILTER',

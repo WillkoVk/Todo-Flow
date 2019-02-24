@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Asap');
 
+$color-outline: #2a7fff;
+
 * {
   font-size: inherit;
   font-family: inherit;
@@ -29,10 +31,12 @@ ul {
 
 footer {
   padding: 1em 0;
+
   button {
     cursor: pointer;
+
     &:hover {
-      color: #2a7fff;
+      color: $color-outline;
     }
   }
 }
@@ -79,54 +83,54 @@ button {
 
 form {
   margin-top: 1rem;
-}
 
-input,
-textarea,
-select,
-[type="submit"] {
-  border: 0.125rem solid;
-  border-radius: 0.125rem;
-  line-height: 1;
-}
+  input,
+  textarea,
+  select,
+  [type="submit"] {
+    border: 0.125rem solid;
+    border-radius: 0.125rem;
+    line-height: 1;
+  }
 
-[type="text"] {
-  margin-right: 0.25rem;
-}
+  [type="text"] {
+    margin-right: 0.25rem;
+  }
 
-[type="submit"] {
-  background: #000;
-  color: #fff;
-  padding: 0.25rem 0.5rem;
-  border: 2px solid #000;
-}
+  [type="submit"] {
+    background: #000;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border: 2px solid #000;
+  }
 
-[type="submit"][disabled] {
-  opacity: 0.33;
-}
+  [type="submit"][disabled] {
+    opacity: 0.33;
+  }
 
-::-webkit-input-placeholder {
-  color: #838383;
-  font-style: italic;
-}
-::-moz-placeholder {
-  color: #838383;
-  font-style: italic;
-}
-:-ms-input-placeholder {
-  color: #838383;
-  font-style: italic;
-}
-:-moz-placeholder {
-  color: #838383;
-  font-style: italic;
+  ::-webkit-input-placeholder {
+    color: #838383;
+    font-style: italic;
+  }
+  ::-moz-placeholder {
+    color: #838383;
+    font-style: italic;
+  }
+  :-ms-input-placeholder {
+    color: #838383;
+    font-style: italic;
+  }
+  :-moz-placeholder {
+    color: #838383;
+    font-style: italic;
+  }
 }
 
 input:focus,
 button:focus,
 [type="checkbox"]:focus + label .tick {
   outline: none;
-  box-shadow: 0 0 0 0.125rem #2a7fff;
+  box-shadow: 0 0 0 0.125rem $color-outline;
 }
 
 [tabindex="-1"]:focus {
@@ -165,5 +169,29 @@ button:focus,
 
 .error {
   color: indianred;
+}
+
+.filter-input {
+  border: 1px solid transparent;
+  &:focus {
+    border-color: grey;
+  }
+
+  ::-webkit-input-placeholder {
+    color: black;
+    font-style: initial;
+  }
+  ::-moz-placeholder {
+    color: black;
+    font-style: initial;
+  }
+  :-ms-input-placeholder {
+    color: black;
+    font-style: initial;
+  }
+  :-moz-placeholder {
+    color: black;
+    font-style: initial;
+  }
 }
 

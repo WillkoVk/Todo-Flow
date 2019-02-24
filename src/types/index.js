@@ -8,14 +8,17 @@ import type {
 } from './todos';
 import type {
   VisibilityFilterState,
-  VisibilityFilterAction
-} from './priorityFilter';
+  VisibilityFilterAction,
+  FilterByTitleState,
+  TitleFilterAction
+} from './filter';
+
 
 export type ReduxInitAction = { type: '@@INIT' };
 
-export type State = TodosState & VisibilityFilterState;
+export type State = TodosState & VisibilityFilterState & FilterByTitleState;
 
-export type Action = ReduxInitAction | TodosAction | VisibilityFilterAction;
+export type Action = ReduxInitAction | TodosAction | VisibilityFilterAction | TitleFilterAction;
 
 export type Store = ReduxStore<State, Action>;
 
