@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import moment from 'moment';
 
+import { HIGH, MEDIUM, LOW } from '../constants/priority';
 import { addTodo } from '../actions/todos';
 import FieldWrapper from '../components/FieldWrapper';
 
@@ -19,7 +20,7 @@ export type Props = {
 const initialTodoState = {
   title: '',
   description: '',
-  priority: 'Middle',
+  priority: MEDIUM,
   start: moment().format('YYYY-MM-DD')
 };
 
@@ -102,9 +103,9 @@ class AddTodo extends Component<Props> {
                       value={values.priority}
                       onChange={handleChange}
                       onBlur={handleBlur}>
-                <option value="Low">Low</option>
-                <option value="Middle">Middle</option>
-                <option value="High">High</option>
+                <option value={LOW}>Low</option>
+                <option value={MEDIUM}>Medium</option>
+                <option value={HIGH}>High</option>
               </select>
             </FieldWrapper>
             <FieldWrapper fieldName="start" label="Start date">

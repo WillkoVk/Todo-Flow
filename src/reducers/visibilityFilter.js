@@ -1,12 +1,12 @@
 // @flow
 
-import type { VisibilityFilter } from '../types/visibilityFilter';
+import type { PriorityFilter } from '../types/priorityFilter';
 import type { Action } from '../types';
 
 const visibilityFilter = (
-  state: VisibilityFilter = 'SHOW_ALL',
+  state: PriorityFilter = 'SHOW_ALL',
   action: Action
-): VisibilityFilter => {
+): PriorityFilter => {
   switch (action.type) {
     case 'SET_VISIBILITY_FILTER':
       return action.filter;

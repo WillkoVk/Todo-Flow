@@ -6,10 +6,10 @@ import { setVisibilityFilter } from '../actions/visibilityFilter';
 import Link from '../components/Link';
 
 import type { State, Dispatch } from '../types';
-import type { VisibilityFilter } from '../types/visibilityFilter';
+import type { PriorityFilter } from '../types/priorityFilter';
 
 type OwnProps = {
-  filter: VisibilityFilter
+  filter: PriorityFilter
 };
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => ({

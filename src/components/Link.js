@@ -4,7 +4,7 @@ import React, { type Node } from 'react';
 
 export type Props = {
   active: boolean,
-  children?: Node,
+  children: Node,
   onClick: () => void
 };
 
@@ -14,15 +14,15 @@ const Link = ({ active, children, onClick }: Props) => {
   }
 
   return (
-    <a // eslint-disable-line jsx-a11y/anchor-is-valid
-      href="#"
+    <button
+      type="button"
       onClick={(event: Event) => {
         event.preventDefault();
         onClick();
       }}
     >
       {children}
-    </a>
+    </button>
   );
 };
 

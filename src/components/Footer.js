@@ -3,15 +3,18 @@
 import React from 'react';
 
 import FilterLink from '../containers/FilterLink';
+import { HIGH, MEDIUM, LOW, SHOW_ALL } from '../constants/priority';
 
 const Footer = () => (
-  <p>
-    Show: <FilterLink filter="SHOW_ALL">All</FilterLink>
+  <footer>
+    Show: <FilterLink filter={SHOW_ALL}>All</FilterLink>
     {', '}
-    <FilterLink filter="SHOW_ACTIVE">Active</FilterLink>
+    <FilterLink filter={HIGH}>High priority</FilterLink>
     {', '}
-    <FilterLink filter="SHOW_COMPLETED">Completed</FilterLink>
-  </p>
+    <FilterLink filter={MEDIUM}>Medium priority</FilterLink>
+    {', '}
+    <FilterLink filter={LOW}>Low priority</FilterLink>
+  </footer>
 );
 
 export default Footer;

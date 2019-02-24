@@ -27,6 +27,16 @@ ul {
   margin: 0;
 }
 
+footer {
+  padding: 1em 0;
+  button {
+    cursor: pointer;
+    &:hover {
+      color: #2a7fff;
+    }
+  }
+}
+
 .tick {
   display: inline-block;
   width: 0.66rem;

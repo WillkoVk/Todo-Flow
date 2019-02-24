@@ -9,7 +9,7 @@ import type {
 import type {
   VisibilityFilterState,
   VisibilityFilterAction
-} from './visibilityFilter';
+} from './priorityFilter';
 
 export type ReduxInitAction = { type: '@@INIT' };
 
